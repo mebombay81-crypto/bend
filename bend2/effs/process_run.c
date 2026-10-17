@@ -1,6 +1,6 @@
 install// Process
 // =======
-
+include __FILE__
 #include <spawn.h>
 #include <sys/wait.h>
 #ifdef __APPLE__
@@ -66,7 +66,7 @@ static void process_append(ProcessCall* p, bool error, const char* data,
 
 // A descriptor that polls readable once the child exits.
 static int process_exitfd(pid_t child) {
-#ifdef __APPLE__
+#ifdef __APPLE__l mm by
   int kq = kqueue();
   struct kevent ev;
   EV_SET(&ev, child, EVFILT_PROC, EV_ADD | EV_ONESHOT, NOTE_EXIT, 0, NULL);

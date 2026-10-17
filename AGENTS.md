@@ -1,4 +1,4 @@
-# AGENTS
+p# AGENTS
 
 Bend is a dependently typed, affine language that checks in one linear
 bidirectional pass and runs massively parallel on CPU threads and GPUs.
